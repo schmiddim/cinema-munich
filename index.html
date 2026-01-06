@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kino on Demand – Wunschfilm München</title>
+    <meta name="description" content="Sag uns, welche 3 Filme du in München (wieder) im Kino sehen willst. Wenn genug Leute mitmachen, versuchen wir ein Screening zu organisieren." />
+    <style>
+        :root { --max: 760px; }
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #0b0c10; color: #eaeaf0; }
+        a { color: inherit; }
+        .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px 40px; }
+        .card { background: #141521; border: 1px solid #2a2b3f; border-radius: 16px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+        h1 { font-size: 28px; margin: 0 0 10px; }
+        p { line-height: 1.5; margin: 0 0 14px; color: #c9cada; }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 14px; }
+        label { font-size: 14px; color: #c9cada; }
+        input { width: 100%; padding: 12px 12px; border-radius: 12px; border: 1px solid #2a2b3f; background: #0f1020; color: #eaeaf0; }
+        input::placeholder { color: #7e80a5; }
+        .row { display: grid; grid-template-columns: 1fr; gap: 6px; }
+        .btn { margin-top: 12px; width: 100%; padding: 12px 14px; border-radius: 12px; border: 0; background: #eaeaf0; color: #0b0c10; font-weight: 700; cursor: pointer; }
+        .btn:hover { filter: brightness(0.95); }
+        .fine { margin-top: 12px; font-size: 12px; color: #a9aac3; }
+        .footer { margin-top: 14px; display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: #a9aac3; }
+        .pill { display:inline-block; padding: 4px 10px; border: 1px solid #2a2b3f; border-radius: 999px; color:#c9cada; font-size: 12px; }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="pill">München • Wunschkino-Test</div>
+    <h1>Welche Filme willst du in München (wieder) im Kino sehen?</h1>
+    <p>Trag deine <strong>Top 3 Wunschfilme</strong> ein. Wenn genug Leute mitmachen, versuchen wir, ein Screening in einem Münchner Kino zu organisieren.</p>
+
+    <div class="card">
+        <form action="https://formspree.io/f/xeeoyqlj" method="POST">
+            <div class="grid">
+                <div class="row">
+                    <label for="film1">Wunschfilm 1</label>
+                    <input id="film1" name="film_1" type="text" placeholder="z. B. Dune: Part Two (OV/OmU?)" required />
+                </div>
+
+                <div class="row">
+                    <label for="film2">Wunschfilm 2</label>
+                    <input id="film2" name="film_2" type="text" placeholder="z. B. Interstellar (IMAX)" />
+                </div>
+
+                <div class="row">
+                    <label for="film3">Wunschfilm 3</label>
+                    <input id="film3" name="film_3" type="text" placeholder="z. B. The Dark Knight (OV)" />
+                </div>
+
+                <div class="row">
+                    <label for="email">E-Mail (für Updates)</label>
+                    <input id="email" name="email" type="email" placeholder="name@domain.de" required />
+                </div>
+
+                <!-- optional: Stadt fixieren -->
+                <input type="hidden" name="stadt" value="München" />
+            </div>
+
+            <button class="btn" type="submit">Ich wäre dabei</button>
+
+            <div class="fine">
+                Wir nutzen deine E-Mail nur, um dich zu informieren, falls ein Screening für einen deiner Wünsche zustande kommt.
+                Kein Tracking, kein Newsletter-Spam.
+            </div>
+
+            <div class="footer">
+                <a href="/impressum.html">Impressum</a>
+                <a href="/datenschutz.html">Datenschutz</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
