@@ -10,6 +10,18 @@
   --shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f4f2;
+    --panel: #ffffff;
+    --border: #d7d5cf;
+    --text: #1a1a1a;
+    --muted: #5b5954;
+    --accent: #1a1a1a;
+    --shadow: 0 12px 34px rgba(40, 34, 24, 0.14);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -173,6 +185,48 @@ button:active {
 
 .footer a:hover {
   border-color: currentColor;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: radial-gradient(circle at 20% 20%, rgba(64, 56, 40, 0.08), transparent 22%),
+      radial-gradient(circle at 80% 0%, rgba(64, 56, 40, 0.12), transparent 26%),
+      var(--bg);
+  }
+
+  a:hover {
+    color: #1a1a1a;
+  }
+
+  .badge {
+    border-color: #d7d5cf;
+    background: linear-gradient(135deg, rgba(210, 203, 184, 0.35), rgba(255, 255, 255, 0.95));
+    color: #1a1a1a;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 22px rgba(40, 34, 24, 0.12);
+  }
+
+  .badge::before {
+    color: #6d6a60;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    background: #f2f0ea;
+  }
+
+  input::placeholder {
+    color: #8a867e;
+  }
+
+  input:focus {
+    border-color: #8a867e;
+    box-shadow: 0 0 0 3px rgba(138, 134, 126, 0.2);
+  }
+
+  button {
+    background: linear-gradient(135deg, #f2efe6, #d8d1c2);
+    color: #1a1a1a;
+  }
 }
 
 .text-page {
