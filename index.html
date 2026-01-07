@@ -1,46 +1,46 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Kino on Demand – Wunschfilm München</title>
-    <meta name="description" content="Sag uns, welche 3 Filme du in München (wieder) im Kino sehen willst. Wenn genug Leute mitmachen, versuchen wir ein Screening zu organisieren." />
+    <title>Cinema on Demand – Munich Wish List</title>
+    <meta name="description" content="Tell us which 3 films you want to see (again) in Munich cinemas. If enough people join, we’ll try to organize a screening." />
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <main class="page">
     <header class="header">
-        <div class="badge">München • Wunschkino</div>
-        <h1>Welche Filme willst du in München (wieder) im Kino sehen?</h1>
-        <p>Trag deine <strong>Top 3 Wunschfilme</strong> ein. Wenn genug Leute mitmachen, versuchen wir, ein Screening in einem Münchner Kino zu organisieren.</p>
+        <div class="badge">Munich • Wish Cinema</div>
+        <h1>Which films do you want to see (again) in Munich cinemas?</h1>
+        <p>Enter your <strong>top 3 wish-list films</strong>. If enough people join, we’ll try to organize a screening at a Munich cinema.</p>
     </header>
 
-    <section class="card" aria-label="Wunschfilm-Formular">
+    <section class="card" aria-label="Wish-list form">
         <form action="https://formspree.io/f/xeeoyqlj" method="POST">
             <div class="form-grid">
-                <label class="label" for="film1">Wunschfilm 1</label>
-                <input id="film1" name="film_1" type="text" placeholder="z. B. Dune: Part Two (OV/OmU?)" required />
+                <label class="label" for="film1">Wish-list film 1</label>
+                <input id="film1" name="film_1" type="text" placeholder="e.g. Dune: Part Two (OV/OmU?)" required />
 
-                <label class="label" for="film2">Wunschfilm 2</label>
-                <input id="film2" name="film_2" type="text" placeholder="z. B. Interstellar (IMAX)" />
+                <label class="label" for="film2">Wish-list film 2</label>
+                <input id="film2" name="film_2" type="text" placeholder="e.g. Interstellar (IMAX)" />
 
-                <label class="label" for="film3">Wunschfilm 3</label>
-                <input id="film3" name="film_3" type="text" placeholder="z. B. The Dark Knight (OV)" />
+                <label class="label" for="film3">Wish-list film 3</label>
+                <input id="film3" name="film_3" type="text" placeholder="e.g. The Dark Knight (OV)" />
 
-                <label class="label" for="email">E-Mail (für Updates)</label>
-                <input id="email" name="email" type="email" placeholder="name@domain.de" required />
+                <label class="label" for="email">Email (optional, for updates)</label>
+                <input id="email" name="email" type="email" placeholder="name@domain.com" />
 
                 <input type="hidden" name="stadt" value="München" />
             </div>
 
-            <button type="submit">Ich wäre dabei</button>
+            <button type="submit">Count me in</button>
 
-            <p class="hint">Wir nutzen deine E-Mail nur, um dich zu informieren, falls ein Screening für einen deiner Wünsche zustande kommt. Kein Tracking, kein Newsletter-Spam.</p>
+            <p class="hint">We use your email only to let you know if a screening for one of your wishes happens. No tracking, no newsletter spam.</p>
 
             <nav class="footer" aria-label="Footer Navigation">
-                <a href="/cinema-munich/impressum.html">Impressum</a>
-                <a href="/cinema-munich/datenschutz.html">Datenschutz</a>
+                <a href="/cinema-munich/impressum.html">Imprint</a>
+                <a href="/cinema-munich/datenschutz.html">Privacy Policy</a>
             </nav>
         </form>
     </section>
